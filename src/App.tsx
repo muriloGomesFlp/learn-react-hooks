@@ -1,26 +1,29 @@
-import React from 'react';
 import logo from './logo.svg';
-import './App.css';
-//teste
+import './App.css'
+import {TemplatePage, FooterTemplate} from './Pages/index'
+import {Container, Grid, Image, Segment} from 'semantic-ui-react';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container fluid className='App-header'>
+            <TemplatePage/>
+            <Container>
+                <Grid centered columns="1">
+                    <Grid.Row>
+                        <Grid.Column>
+                            <Segment>Brief Text...</Segment>
+                        </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                        <img src={logo}
+                            className='App-logo'/>
+                    </Grid.Row>
+                </Grid>
+            </Container>
+            <FooterTemplate/>
+        </Container>
+
+    )
 }
 
 export default App;
